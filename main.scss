@@ -1,0 +1,157 @@
+body {
+    user-select: none !important;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.bottom-navbar {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-top: 1px gray solid;
+  background-color: black;
+}
+
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.link-strip {
+  text-decoration: none !important;
+  color: whitesmoke !important;
+}
+
+.greeting-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.greeting {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.splash-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.down-arrow {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bounce {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 85px;
+    margin-top: 20px;
+    background-color: black;
+}
+
+.home-card {
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    overflow: hidden;
+    max-height: 220px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-name {
+    margin-left: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-open-status {
+    margin-right: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.tag-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: whitesmoke;
+    border: 1px whitesmoke solid;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.event-container {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.event-head {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.event-content {
+    color: whitesmoke;
+}
