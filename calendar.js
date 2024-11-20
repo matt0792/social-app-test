@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function populateCalendar(index) {
   let calendarContainer = document.querySelector(".calendar-container");
 
-  userUpcomingEvents.forEach((event) => {
+  userUpcomingEvents.forEach((event, i) => {
     let eventBlock = document.createElement("div");
     eventBlock.classList.add("calendar-event-block");
     let eventElement = document.createElement("div");
@@ -84,7 +84,7 @@ function populateCalendar(index) {
     let deleteIcon = document.createElement("i");
     deleteIcon.classList.add("bi", "bi-trash");
     deleteElement.appendChild(deleteIcon);
-    deleteElement.setAttribute("onclick", `deleteEvent(${index})`);
+    deleteElement.setAttribute("onclick", `deleteEvent(${i})`);
 
     eventElement.appendChild(nameElement);
     eventElement.appendChild(venueContainer);
