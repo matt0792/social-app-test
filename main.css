@@ -100,7 +100,6 @@ body {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  padding-bottom: 80px;
   margin-top: 20px;
   background-color: black;
 }
@@ -274,4 +273,22 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+}
+
+.end-scroll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: black;
+}
+
+.end-circle {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: 20px;
+  width: 20px;
+  background-color: whitesmoke !important;
+  border-radius: 50%;
+  animation: loadBounce 1s ease infinite;
 }/*# sourceMappingURL=main.css.map */
