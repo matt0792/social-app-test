@@ -18,6 +18,10 @@ body {
   animation: fadeIn 0.7s ease forwards;
 }
 
+.fade-in-fast {
+  animation: fadeIn 0.3s ease forwards;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -88,6 +92,15 @@ body {
   font-style: normal;
   text-align: center;
   margin-top: 10px;
+}
+
+.subtext {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  text-align: center;
+  opacity: 0.7;
+  font-style: italic;
 }
 
 .down-arrow {
@@ -220,6 +233,8 @@ body {
 }
 
 .card-address {
+  display: flex;
+  gap: 7px;
   margin-left: 10px;
   color: whitesmoke;
   font-size: 15px;
@@ -431,4 +446,73 @@ body {
 
 .version {
   text-align: center;
+}
+
+.search-bar-container {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  background-color: whitesmoke !important;
+  border-radius: 30px;
+}
+
+.search-placeholder {
+  margin-left: 20px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.search-icon {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 25px;
+  color: black;
+}
+
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  color: whitesmoke;
+}
+
+.explore-title {
+  margin-top: 17vh;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.explore-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.explore-tag {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px;
+  margin-top: 10px;
+  color: whitesmoke;
+  border: 1px whitesmoke solid;
+  border-radius: 7px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

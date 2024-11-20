@@ -3,7 +3,7 @@ let fullScreenElement = document.getElementById("fullScreen");
 
 let venueIndex = JSON.parse(sessionStorage.getItem("venueToLoad"));
 
-const tags = ["Techno", "Underground", "Sing - Along", "Bar", "Club"];
+let tags = sessionStorage.getItem("tags") || [];
 
 let database = JSON.parse(sessionStorage.getItem("database")) || [];
 
@@ -38,6 +38,8 @@ function populateProfile() {
 
   let addressElement = document.createElement("div");
   addressElement.classList.add("card-address");
+  let venueIcon = document.createElement("i");
+  venueIcon.classList.add("bi", "bi-geo-alt-fill");
   let addressText = document.createElement("div");
   addressText.textContent = currentVenue.address;
 
@@ -80,6 +82,7 @@ function populateProfile() {
   venueHead.appendChild(nameElement);
   venueHead.appendChild(openStatusElement);
   contentElement.appendChild(addressElement);
+  addressElement.appendChild(venueIcon);
   addressElement.appendChild(addressText);
   contentElement.appendChild(eventContainer);
   eventContainer.appendChild(eventHead);
@@ -89,7 +92,9 @@ function populateProfile() {
 }
 
 function toggleUpcomingEvents() {
-  let upcomingEventsContainer = document.querySelector(".upcoming-event-container");
+  let upcomingEventsContainer = document.querySelector(
+    ".upcoming-event-container"
+  );
   let showMoreIcon = document.querySelector(".bi-caret-down-fill");
   if (upcomingEventsContainer.classList.contains("expanded")) {
     // Collapse

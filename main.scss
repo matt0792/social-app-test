@@ -1,6 +1,6 @@
 body {
-    user-select: none !important;
-    background-color: black !important;
+  user-select: none !important;
+  background-color: black !important;
 }
 
 .full-screen {
@@ -9,20 +9,24 @@ body {
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .fade-in {
-    animation: fadeIn 0.7s ease forwards;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.fade-in-fast {
+  animation: fadeIn 0.3s ease forwards;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .bottom-navbar {
@@ -51,384 +55,464 @@ body {
 }
 
 .page-placeholder {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    color: whitesmoke;
-    font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: whitesmoke;
+  font-size: 30px;
 }
 
 .greeting-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    align-items: center;
-    justify-content: center;
-    background-color: whitesmoke;
-    padding-bottom: 20px;
-    padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .greeting {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    text-align: center;
-    margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .splash-text {
-    font-family: "Roboto", sans-serif;
-    font-size: 35px;
-    font-weight: bold;
-    font-style: normal;
-    text-align: center;
-    margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.subtext {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  text-align: center;
+  opacity: 0.7;
+  font-style: italic;
 }
 
 .down-arrow {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .bounce {
-    animation: bounce 1s ease infinite;
+  animation: bounce 1s ease infinite;
 }
 
 @keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .content-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: black;
 }
 
 .home-card {
-    background-color: black;
-    font-family: "Roboto", sans-serif;
-    overflow: hidden;
-    position: relative;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  position: relative;
 }
 
 .image-container {
-    overflow: hidden;
-    max-height: 220px;
+  overflow: hidden;
+  max-height: 220px;
 }
 
 .card-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .card-head {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card-name {
-    margin-left: 10px;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: 30px;
+  margin-left: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .card-open-status {
-    margin-right: 20px;
-    color: whitesmoke;
-    font-weight: bold;
+  margin-right: 20px;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 .tag-container {
-    margin-top: 10px;
-    margin-left: 10px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tag {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: whitesmoke;
-    border: 1px whitesmoke solid;
-    border-radius: 7px;
-    cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: whitesmoke;
+  border: 1px whitesmoke solid;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 .event-container {
-    margin-left: 40px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .event-head {
-    color: whitesmoke;
-    font-weight: bold;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 .event-content {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 .loader {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .load-circle {
-    background-color: whitesmoke;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    animation: loadBounce 1s ease infinite;
+  background-color: whitesmoke;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: loadBounce 1s ease infinite;
 }
 
 @keyframes loadBounce {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.5);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .profile-content {
-    background-color: black;
-    height: 100%;
-    font-family: "Roboto", sans-serif;
+  background-color: black;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .card-address {
-    margin-left: 10px;
-    color: whitesmoke;
-    font-size: 15px;
-    font-weight: bold;
+  display: flex;
+  gap: 7px;
+  margin-left: 10px;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .current-event {
-    margin-left: 20px;
-    color: whitesmoke;
-    font-weight: bold;
+  margin-left: 20px;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 .upcoming-event-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: whitesmoke;
-    opacity: 0.7;
-    max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+  opacity: 0.7;
+  max-height: fit-content;
 }
 
 .upcoming-event {
-    display: flex;
-    gap: 20px;
-    margin-left: 20px;
-    color: whitesmoke;
-    opacity: 0.7;
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  color: whitesmoke;
+  opacity: 0.7;
 }
 
 .bi-calendar-plus {
-    font-size: 20px;
-    color: whitesmoke !important;
-    opacity: 1;
-    cursor: pointer;
+  font-size: 20px;
+  color: whitesmoke !important;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .event-container {
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .profile-event-head {
-    color: whitesmoke;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .back-button {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 20px;
-    left: 20px;
-    background-color: whitesmoke !important;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 9999;
-    height: 55px;
-    width: 55px;
-    border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+  background-color: whitesmoke !important;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9999;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
 }
 
 .icon-container {
-    margin-top: 10px;
-    margin-left: -50px;
-    font-size: 30px;
-    color: whitesmoke;
-    opacity: 0.7;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  margin-top: 10px;
+  margin-left: -50px;
+  font-size: 30px;
+  color: whitesmoke;
+  opacity: 0.7;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .back-arrow {
-    font-size: 30px;
-    color: black !important;
+  font-size: 30px;
+  color: black !important;
 }
 
 .rotate-up {
-    transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .upcoming-event-container {
-    max-height: 0; 
-    overflow: hidden;
-    transition: max-height 0.3s ease-out; 
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
 
 .end-scroll-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: black;
 }
 
 .end-circle {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    height: 20px;
-    width: 20px;
-    background-color: whitesmoke !important;
-    border-radius: 50%;
-    animation: loadBounce 1s ease infinite;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: 20px;
+  width: 20px;
+  background-color: whitesmoke !important;
+  border-radius: 50%;
+  animation: loadBounce 1s ease infinite;
 }
 
 .calendar-container {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 20px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
 }
 
 .calendar-event-block {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .calendar-event {
-    color: whitesmoke;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-right: 50px;
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 50px;
 }
 
 .calendar-event-circle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
 }
 
 .calendar-event-circle {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 23px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
 }
 
 .calendar-event-line {
-    color: whitesmoke;
-    padding-left: 37px;
-    font-weight: bold;
-    font-size: 20px;
+  color: whitesmoke;
+  padding-left: 37px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .calendar-event-date-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .calendar-event-venue-container {
-    font-weight: bold;
-    display: flex;
-    gap: 10px;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
 }
 
 .calendar-event-date {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .calendar-event-name {
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 7px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 7px;
 }
 
 .calendar-event-time {
-    font-style: italic;
+  font-style: italic;
 }
 
 .calendar-event-delete {
-    position: absolute;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    right: 10px;
-    color: whitesmoke;
-    font-size: 23px;
-    cursor: pointer;
+  position: absolute;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  right: 10px;
+  color: whitesmoke;
+  font-size: 23px;
+  cursor: pointer;
 }
 
 .no-events-container {
-    display: flex;
-    color: whitesmoke;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
 }
 
 .version {
-    text-align: center;
+  text-align: center;
+}
+
+.search-bar-container {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  background-color: whitesmoke !important;
+  border-radius: 30px;
+}
+
+.search-placeholder {
+  margin-left: 20px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.search-icon {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 25px;
+  color: black;
+}
+
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  color: whitesmoke;
+}
+
+.explore-title {
+    margin-top: 17vh;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.explore-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.explore-tag {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px;
+  margin-top: 10px;
+  color: whitesmoke;
+  border: 1px whitesmoke solid;
+  border-radius: 7px;
+  cursor: pointer;
 }

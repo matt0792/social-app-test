@@ -5,9 +5,9 @@ let fullScreenElement = document.getElementById("fullScreen");
 
 let database = JSON.parse(sessionStorage.getItem("database")) || [];
 
+let homeTags = JSON.parse(sessionStorage.getItem("tags")) || [];
 
 
-const tags = ["Techno", "Underground", "Sing - Along", "Bar", "Club", "Restaurant", "Live Music"];
 let homeData = database;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -133,7 +133,7 @@ function loadCards() {
     for (let x = 0; x < currentVenue.tags.length; x++) {
       let tagElement = document.createElement("div");
       tagElement.classList.add("tag");
-      tagElement.textContent = tags[currentVenue.tags[x]];
+      tagElement.textContent = homeTags[currentVenue.tags[x]];
       tagContainer.appendChild(tagElement);
     }
   }
