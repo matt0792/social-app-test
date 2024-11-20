@@ -93,7 +93,7 @@ function getDate() {
 
 function populateGreeting() {
   let date = getDate();
-  greetingElement.textContent = `Hi Ash. Today is ${date}`;
+  greetingElement.textContent = `Hi. Today is ${date}`;
 }
 
 function loadCards() {
