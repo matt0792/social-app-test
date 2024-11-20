@@ -4,46 +4,10 @@ let fullScreenElement = document.getElementById("fullScreen");
 let venueIndex = JSON.parse(sessionStorage.getItem("venueToLoad"));
 
 const tags = ["Techno", "Underground", "Sing - Along", "Bar", "Club"];
-let venueData = [
-  {
-    name: "Modular",
-    img: "./images/modular.png",
-    tags: [0, 1, 4],
-    openStatus: true,
-    currentEvent: "- Binary Botany",
-    upcomingEvents: [
-      "- Modular Tuesday",
-      "- First Thursday",
-      "- Mark Valsecchi Takeover",
-    ],
-    address: "34 Riebeek Street, Cape Town",
-  },
-  {
-    name: "Moveable Feast",
-    img: "./images/moveable.png",
-    tags: [0, 2, 3, 4],
-    openStatus: true,
-    currentEvent: "- Badger Takeover",
-    upcomingEvents: [
-      "- Monday Grooves",
-      "- First Thursday",
-    ],
-    address: "13 Kloof Nek Rd, Cape Town",
-  },
-  {
-    name: "Village Idiot",
-    img: "./images/village.png",
-    tags: [2, 3, 4],
-    openStatus: true,
-    currentEvent: "- ABBA Night",
-    upcomingEvents: [
-      "- Wine and Dine",
-      "- First Thursday",
-      "- Bad Sound but Loud",
-    ],
-    address: "32 Loop St, Cape Town",
-  },
-];
+
+let database = JSON.parse(sessionStorage.getItem("database")) || [];
+
+let venueData = database;
 
 document.addEventListener("DOMContentLoaded", function () {
   populateProfile();

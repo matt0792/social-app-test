@@ -3,30 +3,12 @@ let contentElement = document.getElementById("content");
 let loadElement = document.getElementById("loader");
 let fullScreenElement = document.getElementById("fullScreen");
 
-const tags = ["Techno", "Underground", "Sing - Along", "Bar", "Club"];
-let homeData = [
-  {
-    name: "Modular",
-    img: "./images/modular.png",
-    tags: [0, 1, 4],
-    openStatus: true,
-    currentEvent: "- Binary Botany"
-  },
-  {
-    name: "Moveable Feast",
-    img: "./images/moveable.png",
-    tags: [0, 2, 3, 4],
-    openStatus: true,
-    currentEvent: "- Badger Takeover"
-  },
-  {
-    name: "Village Idiot",
-    img: "./images/village.png",
-    tags: [2, 3, 4],
-    openStatus: true,
-    currentEvent: "- ABBA Night"
-  }
-];
+let database = JSON.parse(sessionStorage.getItem("database")) || [];
+
+
+
+const tags = ["Techno", "Underground", "Sing - Along", "Bar", "Club", "Restaurant", "Live Music"];
+let homeData = database;
 
 document.addEventListener("DOMContentLoaded", function () {
     showLoader();
