@@ -50,6 +50,16 @@ body {
   color: whitesmoke !important;
 }
 
+.page-placeholder {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: whitesmoke;
+  font-size: 30px;
+}
+
 .greeting-container {
   display: flex;
   flex-direction: column;
