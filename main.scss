@@ -352,7 +352,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding-right: 10px;
+    padding-right: 50px;
 }
 
 .calendar-event-circle-container {
@@ -398,8 +398,31 @@ body {
 .calendar-event-name {
     font-weight: bold;
     font-size: 30px;
+    margin-bottom: 7px;
 }
 
 .calendar-event-time {
     font-style: italic;
+}
+
+.calendar-event-delete {
+    position: absolute;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    right: 10px;
+    color: whitesmoke;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.no-events-container {
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
 }
