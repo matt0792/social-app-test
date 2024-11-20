@@ -101,7 +101,13 @@ function populateProfile() {
     let upcomingEvent = document.createElement("div");
     upcomingEvent.classList.add("upcoming-event");
     upcomingEvent.textContent = currentVenue.upcomingEvents[i];
+    let addToCalendarElement = document.createElement("div");
+    addToCalendarElement.classList.add("add-to-calendar");
+    let addToCalendarIcon = document.createElement("i");
+    addToCalendarIcon.classList.add("bi", "bi-calendar-plus");
+    addToCalendarElement.appendChild(addToCalendarIcon);
     upcomingEventsContainer.appendChild(upcomingEvent);
+    upcomingEvent.appendChild(addToCalendarElement);
   }
 
   contentElement.appendChild(imageContainer);
