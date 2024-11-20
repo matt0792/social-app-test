@@ -1,5 +1,7 @@
 let greetingElement = document.getElementById("greeting");
 let contentElement = document.getElementById("content");
+let loadElement = document.getElementById("loader");
+let fullScreenElement = document.getElementById("fullScreen");
 
 const tags = ["Techno", "Underground", "Sing - Along", "Bar", "Club"];
 let homeData = [
@@ -27,9 +29,20 @@ let homeData = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-  populateGreeting();
-  loadCards();
+    showLoader();
 });
+
+function showLoader() {
+    loadElement.classList.remove("hidden");
+    loadElement.classList.add("fade-in");
+    setTimeout(() => {
+        loadElement.classList.add("hidden");
+        fullScreenElement.classList.remove("hidden");
+        fullScreenElement.classList.add("fade-in");
+        populateGreeting();
+        loadCards();
+      }, 1300);
+}
 
 function getDate() {
   const date = new Date();
@@ -89,6 +102,7 @@ function loadCards() {
 
     let cardElement = document.createElement("div");
     cardElement.classList.add("home-card");
+    cardElement.setAttribute("onclick", `openVenueProfile(${i})`)
 
     let venueImageSrc = currentVenue.img;
     let imageContainer = document.createElement("div");
@@ -141,4 +155,9 @@ function loadCards() {
       tagContainer.appendChild(tagElement);
     }
   }
+}
+
+function openVenueProfile(venueIndex) {
+    sessionStorage.setItem("venueToLoad", JSON.stringify(venueIndex));
+    window.location.replace("venueProfile.html");
 }

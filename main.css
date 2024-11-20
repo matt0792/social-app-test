@@ -8,6 +8,22 @@ body {
   height: 100vh;
 }
 
+.hidden {
+  display: none !important;
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .bottom-navbar {
   display: flex;
   position: fixed;
@@ -84,7 +100,7 @@ body {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  padding-bottom: 85px;
+  padding-bottom: 80px;
   margin-top: 20px;
   background-color: black;
 }
@@ -107,6 +123,7 @@ body {
 }
 
 .card-head {
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -155,4 +172,106 @@ body {
 
 .event-content {
   color: whitesmoke;
+}
+
+.loader {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-circle {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: loadBounce 1s ease infinite;
+}
+
+@keyframes loadBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.profile-content {
+  background-color: black;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-address {
+  margin-left: 10px;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.current-event {
+  margin-left: 20px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.upcoming-event {
+  margin-left: 20px;
+  color: whitesmoke;
+  opacity: 0.7;
+  transition: max-height 0.3s ease-out;
+}
+
+.event-container {
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-event-head {
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.back-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+  background-color: black !important;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.icon-container {
+  margin-top: 10px;
+  font-size: 30px;
+  color: whitesmoke;
+  opacity: 0.7;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotate-up {
+  transform: rotate(-180deg);
+}
+
+.upcoming-event-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }/*# sourceMappingURL=main.css.map */
