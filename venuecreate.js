@@ -3,6 +3,8 @@ let exploreContent = document.getElementById("exploreContent");
 
 let activeTags = [];
 
+let venueIp = "192.168.0.168"
+
 document.addEventListener("DOMContentLoaded", function () {
   loadTags();
 });
@@ -49,7 +51,7 @@ function submitVenue() {
   };
 
   // Send the new data to the backend to add it to the pending list
-  fetch("http://localhost:3000/api/add-data", {
+  fetch(`http://${venueIp}:3000/api/add-data`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

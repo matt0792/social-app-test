@@ -1,9 +1,10 @@
 let reviewList = document.getElementById("reviewList");
 
 let pendingVenues = [];
+let ip = "192.168.0.168"
 
 // Fetch pending data from the backend
-fetch("http://localhost:3000/api/pending-venues")
+fetch(`http://${ip}:3000/api/pending-venues`)
   .then((response) => response.json())
   .then((data) => {
     pendingVenues = data;
@@ -32,7 +33,7 @@ function approveVenue(index) {
   let venue = pendingVenues[index];
 
   // Send the approved data to the backend
-  fetch("http://localhost:3000/api/approve-data", {
+  fetch(`http://${ip}:3000/api/approve-data`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -55,7 +56,7 @@ function denyVenue(index) {
   let venue = pendingVenues[index];
 
   // Send the denied data to the backend
-  fetch("http://localhost:3000/api/deny-data", {
+  fetch(`http://${ip}:3000/api/deny-data`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
