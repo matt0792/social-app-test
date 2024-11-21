@@ -15,7 +15,7 @@ function loadTags() {
         let tag = document.createElement("div");
         tag.classList.add("explore-tag");
         tag.textContent = searchTagNames[i];
-        tag.setAttribute("onclick", `filterTags(${i})`);
+        tag.setAttribute("onclick", `filterTags(${i}); activeToggle(this)`);
         exploreContent.appendChild(tag);
     }
 }
@@ -23,6 +23,14 @@ function loadTags() {
 function filterTags(index) {
     let filteredData = venueData.filter((venue) => venue.tags.includes(index));
     loadCards(filteredData);
+}
+
+function activeToggle(element) {
+    let current = document.getElementsByClassName("active");
+    for (let i = 0; i < current.length; i++) {
+        current[i].classList.remove("active");
+    }
+    element.classList.add("active");
 }
 
 function loadCards(cards) {

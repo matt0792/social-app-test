@@ -516,3 +516,112 @@ body {
   border-radius: 7px;
   cursor: pointer;
 }
+
+.create-title {
+  font-family: "Roboto", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+.create-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.active {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.tag-title {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.submit-button {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: whitesmoke;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20vh;
+  cursor: pointer;
+}
+
+.review-title {
+  font-family: "Roboto", sans-serif;
+  margin-top: 30px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+.venue-list-item {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 30px;
+  padding: 20px;
+  border: whitesmoke 1px solid;
+  border-radius: 20px;
+}
+
+.approve-button {
+  background-color: whitesmoke !important;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile-head {
+  height: 60px;
+  border-bottom: gray 1px solid;
+  display: flex;
+  align-items: center;
+}
+
+.setting-icon {
+  font-size: 30px;
+  color: whitesmoke;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.profile-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-left: 20px;
+}
+
+.profile-content {
+  font-family: "Roboto", sans-serif;
+  margin: 5vh 10vw 0 10vw;
+}
+
+.add-venue-button {
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 20px;
+  cursor: pointer;
+}

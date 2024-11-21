@@ -7,23 +7,27 @@ let database = JSON.parse(sessionStorage.getItem("database")) || [];
 
 let homeTags = JSON.parse(sessionStorage.getItem("tags")) || [];
 
-
-let homeData = database;
+let homeData = [];
 
 document.addEventListener("DOMContentLoaded", function () {
-    showLoader();
+  homeData = database;
+  showLoader();
 });
 
 function showLoader() {
-    loadElement.classList.remove("hidden");
-    loadElement.classList.add("fade-in");
-    setTimeout(() => {
-        loadElement.classList.add("hidden");
-        fullScreenElement.classList.remove("hidden");
-        fullScreenElement.classList.add("fade-in");
-        populateGreeting();
-        loadCards();
-      }, 1300);
+  loadElement.classList.remove("hidden");
+  loadElement.classList.add("fade-in");
+  setTimeout(() => {
+    if (homeData.length > 0) {
+      loadElement.classList.add("hidden");
+      fullScreenElement.classList.remove("hidden");
+      fullScreenElement.classList.add("fade-in");
+      populateGreeting();
+      loadCards();
+    } else {
+      location.reload();
+    }
+  }, 1300);
 }
 
 function getDate() {
@@ -84,17 +88,17 @@ function loadCards() {
 
     let cardElement = document.createElement("div");
     cardElement.classList.add("home-card");
-    cardElement.setAttribute("onclick", `openVenueProfile(${i})`)
+    cardElement.setAttribute("onclick", `openVenueProfile(${i})`);
 
     let venueImageSrc = currentVenue.img;
     let imageContainer = document.createElement("div");
     imageContainer.classList.add("image-container");
     let imageElement = document.createElement("img");
     imageElement.src = venueImageSrc;
-    imageElement.classList.add("card-image")
+    imageElement.classList.add("card-image");
 
     let venueHead = document.createElement("div");
-    venueHead.classList.add("card-head")
+    venueHead.classList.add("card-head");
 
     let venueName = currentVenue.name;
     let nameElement = document.createElement("div");
@@ -103,18 +107,17 @@ function loadCards() {
 
     let venueOpenStatus = currentVenue.openStatus ? "[OPEN]" : "[CLOSED]";
     let openStatusElement = document.createElement("div");
-    openStatusElement.classList.add("card-open-status")
+    openStatusElement.classList.add("card-open-status");
     openStatusElement.textContent = venueOpenStatus;
 
     let eventContainer = document.createElement("div");
     eventContainer.classList.add("event-container");
     let eventHead = document.createElement("div");
-    eventHead.textContent = "EVENTS:"
+    eventHead.textContent = "CURRENT EVENT:";
     eventHead.classList.add("event-head");
     let eventContent = document.createElement("div");
     eventContent.classList.add("event-content");
     eventContent.textContent = currentVenue.currentEvent;
-
 
     let tagContainer = document.createElement("div");
     tagContainer.classList.add("tag-container");
@@ -140,6 +143,6 @@ function loadCards() {
 }
 
 function openVenueProfile(venueIndex) {
-    sessionStorage.setItem("venueToLoad", JSON.stringify(venueIndex));
-    window.location.replace("venueProfile.html");
+  sessionStorage.setItem("venueToLoad", JSON.stringify(venueIndex));
+  window.location.replace("venueProfile.html");
 }
