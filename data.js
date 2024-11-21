@@ -27,7 +27,7 @@ function showLoader() {
     } else {
       location.reload();
     }
-  }, 1300);
+  }, 2000);
 }
 
 function getDate() {

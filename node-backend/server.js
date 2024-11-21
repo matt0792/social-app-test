@@ -4,7 +4,26 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = [
+  "https:/matt0792.github.io/social-app-test/",
+  "http://localhost:3000",
+  "http://127.0.0.1:5500",
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // If the origin is in the allowedOrigins list or no origin (requests from localhost during development), allow it
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"), false);
+    }
+  },
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOptions));
 
 let centralData = [
   {
@@ -88,14 +107,14 @@ let pendingVenues = [];
 
 // API endpoint to add data to the pending list
 app.post("/api/add-data", express.json(), (req, res) => {
-    const newData = req.body; // Get the data from the frontend
-  
-    // Add to pending list
-    pendingVenues.push(newData); // Remove nesting here
-  
-    // Respond back with success
-    res.status(200).json({ message: "Data added to pending list" });
-  });
+  const newData = req.body; // Get the data from the frontend
+
+  // Add to pending list
+  pendingVenues.push(newData); // Remove nesting here
+
+  // Respond back with success
+  res.status(200).json({ message: "Data added to pending list" });
+});
 
 // API endpoint to fetch pending data (for moderation)
 app.get("/api/pending-venues", (req, res) => {
@@ -129,25 +148,27 @@ app.post("/api/approve-data", express.json(), (req, res) => {
 
 // API endpoint to deny a pending entry and remove it from pendingVenues
 app.post("/api/deny-data", express.json(), (req, res) => {
-    const deniedData = req.body; // This should be the data that the admin denies
+  const deniedData = req.body; // This should be the data that the admin denies
 
-    // Find the index of the pending item to deny
-    const index = pendingVenues.findIndex(
-        (item) =>
-            item.name === deniedData.name && item.address === deniedData.address
-    );
+  // Find the index of the pending item to deny
+  const index = pendingVenues.findIndex(
+    (item) =>
+      item.name === deniedData.name && item.address === deniedData.address
+  );
 
-    if (index !== -1) {
-        // Remove the item from pendingVenues
-        pendingVenues.splice(index, 1);
+  if (index !== -1) {
+    // Remove the item from pendingVenues
+    pendingVenues.splice(index, 1);
 
-        res.status(200).json({ message: "Data denied and removed from pending list" });
-    } else {
-        res.status(404).json({ error: "Pending data not found" });
-    }
+    res
+      .status(200)
+      .json({ message: "Data denied and removed from pending list" });
+  } else {
+    res.status(404).json({ error: "Pending data not found" });
+  }
 });
 
 // Start the server
-app.listen(3000, '0.0.0.0', () => {
+app.listen(3000, "0.0.0.0", () => {
   console.log(`Server running`);
 });
